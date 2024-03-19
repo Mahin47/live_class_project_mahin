@@ -17,16 +17,20 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       body:
       Center(
-        child: Text('Hello World!, Welcome to App!',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-        ),
-        ),
-        //child: Image.network('https://picsum.photos/id/237/200/300',fit: BoxFit.fill,),
+        // child: Text('Hello World!, Welcome to App!',
+        // textAlign: TextAlign.center,
+        // style: TextStyle(
+        //   fontSize: 24,
+        //   fontWeight: FontWeight.bold,
+        //   fontStyle: FontStyle.italic,
+        //   backgroundColor: Colors.yellow
+        // ),
+        // ),
+        //child: Image.network('https://www.pinterest.com/pin/773704411013971044/')
+        child: Image.asset('images/wallpepar.jpeg'),
       ),
     );
   }

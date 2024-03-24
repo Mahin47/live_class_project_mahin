@@ -20,17 +20,22 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.grey,
       body:
       Center(
-        // child: Text('Hello World!, Welcome to App!',
+        child:
+        // Text('Hello World!, Welcome to App!, Right now we are learing. Help me Allah!,'
+        //     'In Sha Allah',
         // textAlign: TextAlign.center,
+        // maxLines: 2,
         // style: TextStyle(
-        //   fontSize: 24,
+        //   overflow: TextOverflow.ellipsis,
+        //   fontSize: 20,
         //   fontWeight: FontWeight.bold,
         //   fontStyle: FontStyle.italic,
-        //   backgroundColor: Colors.yellow
+        //   backgroundColor: Colors.yellowAccent
         // ),
         // ),
         //child: Image.network('https://www.pinterest.com/pin/773704411013971044/')
-        child: Image.asset('images/wallpepar.jpeg'),
+      //  child: Image.asset('images/wallpepar.jpeg'),
+        Icon(Icons.android)
       ),
     );
   }

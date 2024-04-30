@@ -5,7 +5,14 @@ class GalleryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Photo Gallery'),
+        title: Text('Photo Gallery',
+          style: TextStyle(color: Colors.white ),),
+        backgroundColor: Colors.green,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)
+          ),
+        ],
+        leading: Icon(Icons.arrow_back_ios_new),
       ),
       body: Stack(
         children: [
@@ -93,6 +100,96 @@ class GalleryScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text('Roman Empire')
+                ],
+              ),
+            ),
+          ),
+
+          Positioned(
+            top: 318,
+            left: 226,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen(imagePath: 'images/itaza.jpg', imageName: 'itaza')),
+                );
+              },
+              child: Column(
+                children: [
+                  Container(
+                    width: 180,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      image: DecorationImage(
+                        image: AssetImage('images/itaza.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text('itaza')
+                ],
+              ),
+            ),
+          ),
+
+          Positioned(
+            top: 521,
+            left: 20,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen(imagePath: 'images/macupicu.jpg', imageName: 'macupicu')),
+                );
+              },
+              child: Column(
+                children: [
+                  Container(
+                    width: 180,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      image: DecorationImage(
+                        image: AssetImage('images/macupicu.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text('macupicu')
+                ],
+              ),
+            ),
+          ),
+
+          Positioned(
+            top: 521,
+            left: 226,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen(imagePath: 'images/taj.jpg', imageName: 'taj')),
+                );
+              },
+              child: Column(
+                children: [
+                  Container(
+                    width: 180,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      image: DecorationImage(
+                        image: AssetImage('images/taj.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text('taj')
                 ],
               ),
             ),

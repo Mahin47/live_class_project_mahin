@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 class GalleryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size);
+    print(MediaQuery.of(context).size.width);
+    print(MediaQuery.of(context).size.height);
+    print(MediaQuery.of(context).orientation);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Photo Gallery',
@@ -52,7 +57,7 @@ class GalleryScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen(imagePath: 'images/Petra.jpg', imageName: 'Petra')),
+                  MaterialPageRoute(builder: (context) => DetailsScreen(imagePath: 'images/statue.jpg', imageName: 'statue')),
                 );
               },
               child: Column(
@@ -63,20 +68,20 @@ class GalleryScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       image: DecorationImage(
-                        image: AssetImage('images/Petra.jpg'),
+                        image: AssetImage('images/statue.jpg'),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
                   SizedBox(height: 10),
-                  Text('Petra')
+                  Text('statue')
                 ],
               ),
             ),
           ),
 
           Positioned(
-            top: 318,
+            top: 230,
             left: 20,
             child: GestureDetector(
               onTap: () {
@@ -106,7 +111,7 @@ class GalleryScreen extends StatelessWidget {
           ),
 
           Positioned(
-            top: 318,
+            top: 230,
             left: 226,
             child: GestureDetector(
               onTap: () {
@@ -136,7 +141,7 @@ class GalleryScreen extends StatelessWidget {
           ),
 
           Positioned(
-            top: 521,
+            top: 450,
             left: 20,
             child: GestureDetector(
               onTap: () {
@@ -166,7 +171,7 @@ class GalleryScreen extends StatelessWidget {
           ),
 
           Positioned(
-            top: 521,
+            top: 450,
             left: 226,
             child: GestureDetector(
               onTap: () {
@@ -216,7 +221,7 @@ class DetailsScreen extends StatelessWidget {
         child: Container(
           width: 390,
           height: 325,
-          margin: EdgeInsets.only(top: 104, left: 19),
+          margin: EdgeInsets.only(top: 104, left: 1),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             image: DecorationImage(
